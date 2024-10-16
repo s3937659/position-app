@@ -1,12 +1,39 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMIT Quest Adventure</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="mapid"></div>
+
+    <!-- Score Display -->
+    <div id="score">Score: 0</div>
+
+    <!-- Control Buttons -->
+    <button id="zoom-in" class="icon-button"><i class="fas fa-plus"></i></button>
+    <button id="zoom-out" class="icon-button"><i class="fas fa-minus"></i></button>
+    <button id="find-me" class="icon-button"><i class="fas fa-crosshairs"></i></button>
+
+    <!-- Modal for How to Play -->
+    <div id="howToPlayModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to RMIT Quest Adventure</h2>
+            <p>Your goal is to visit each location on the map and complete challenges by answering questions correctly. 
+                Earn 5 points for each correct answer!</p>
+            <ul>
+                <li>Stay within 10 meters of the location to attempt the challenge.</li>
+                <li>The final quest unlocks only after completing all other quests.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>

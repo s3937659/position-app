@@ -2,3 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Map Container */
+#mapid {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Score Display */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 1000;
+}
+
+/* Control Buttons */
+.icon-button {
+    position: absolute;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#zoom-in { top: 10px; }
+#zoom-out { top: 60px; }
+#find-me { top: 110px; }
+
+.icon-button:hover {
+    background-color: #45a049;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: red;
+}
+
+/* Blinking Marker Animation */
+.blinking-marker {
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    50% { opacity: 0; }
+}
+
+/* User Location Marker Icon */
+.my-location-marker i {
+    color: #0000ff;
+    font-size: 24px;
+}
