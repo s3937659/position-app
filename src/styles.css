@@ -16,12 +16,26 @@ body, html {
 #mapid {
     width: 100vw;
     height: 100vh;
+    position: relative;
+}
+
+/* Game Title */
+#game-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4CAF50;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
 /* Score Display */
 #score {
     position: absolute;
-    top: 10px;
+    top: 50px;
     left: 10px;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
@@ -87,13 +101,38 @@ body, html {
     color: red;
 }
 
-/* Blinking Marker Animation */
-.blinking-marker {
-    animation: blink-animation 1.5s infinite;
+/* Answer Button Styling */
+.option-button {
+    display: block;
+    padding: 8px 12px;
+    margin-top: 5px;
+    background: white;
+    border: 2px solid #4CAF50;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-@keyframes blink-animation {
-    50% { opacity: 0; }
+.option-button:hover, .option-button.selected {
+    border-color: #4CAF50;
+    background: #f0f0f0;
+    color: #4CAF50;
+}
+
+/* Check Answer Button */
+.check-answer-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-answer-button:hover {
+    background-color: #369636;
 }
 
 /* User Location Marker Icon */

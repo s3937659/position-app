@@ -4,36 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RMIT Quest Adventure</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
+    <div id="game-title">RMIT Quest Adventure</div>
     <div id="mapid"></div>
-
-    <!-- Score Display -->
-    <div id="score">Score: 0</div>
-
-    <!-- Control Buttons -->
+    <div id="score">Score: 0 | Completed: 0/7</div>
     <button id="zoom-in" class="icon-button"><i class="fas fa-plus"></i></button>
     <button id="zoom-out" class="icon-button"><i class="fas fa-minus"></i></button>
     <button id="find-me" class="icon-button"><i class="fas fa-crosshairs"></i></button>
-
-    <!-- Modal for How to Play -->
     <div id="howToPlayModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Welcome to RMIT Quest Adventure</h2>
-            <p>Your goal is to visit each location on the map and complete challenges by answering questions correctly. 
-                Earn 5 points for each correct answer!</p>
+            <p>Your goal is to visit each location and complete challenges. Earn 5 points per completed quest!</p>
             <ul>
-                <li>Stay within 10 meters of the location to attempt the challenge.</li>
-                <li>The final quest unlocks only after completing all other quests.</li>
+                <li>You must be within 30 meters of a location to attempt the challenge.</li>
+                <li>The score display shows your progress (Completed: X/7).</li>
             </ul>
         </div>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
