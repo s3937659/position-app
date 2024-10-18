@@ -20,8 +20,8 @@ window.onload = function () {
         {
             id: 1,
             name: "Francis Ormond Building",
-            lat: -37.8079,
-            lng: 144.9634,
+            lat: -37.8083838,
+            lng: 144.9652179,
             question: "Question: What year was the Francis Ormond Building first opened to the public?",
             options: ["1887", "1923", "1901"],
             answer: "1887",
