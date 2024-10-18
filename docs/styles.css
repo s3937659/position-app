@@ -3,7 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 
-/* General Styles */
+/* General */
 body, html {
     height: 100%;
     margin: 0;
