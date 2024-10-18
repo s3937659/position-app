@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
+    <!-- Favicon for the tab -->
     <link rel="icon" type="image/png" href="qa_logo.png">
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -19,9 +20,15 @@
     <button id="zoom-in" class="icon-button"><i class="fas fa-plus"></i></button>
     <button id="zoom-out" class="icon-button"><i class="fas fa-minus"></i></button>
     <button id="find-me" class="icon-button"><i class="fas fa-crosshairs"></i></button>
+
+    <!-- Modal Section -->
     <div id="howToPlayModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            
+            <!-- Game logo -->
+            <img src="qa_logo.png" alt="RMIT Quest Adventure Logo" style="width: 100px; height: auto; display: block; margin: 0 auto;">
+            
             <h2>Welcome to RMIT Quest Adventure</h2>
             <p>Your goal is to visit each location and complete challenges. Earn 5 points per completed quest!</p>
             <ul>
@@ -30,6 +37,7 @@
             </ul>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
