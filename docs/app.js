@@ -40,8 +40,8 @@ window.onload = function () {
         {
             id: 3,
             name: "Swanston Academic Building (SAB)",
-            lat: -37.8085,
-            lng: 144.9642,
+            lat: -1.099272,
+            lng: 37.024501,
             question: "Question: How many floors does the Swanston Academic Building (SAB) have?",
             options: ["10 floors", "12 floors", "15 floors"],
             answer: "12 floors",
